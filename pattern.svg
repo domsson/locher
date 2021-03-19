@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xlink="http://www.w3.org/1999/xlink" baseProfile="tiny" height="100mm" version="1.2" viewBox="0 0 100 100" width="100mm">
+    <defs/>
+    <rect fill="none" height="19.5" stroke="#000" stroke-linejoin="round" stroke-width="1" width="19.5" x="27.75" y="10.25"/>
+    <rect fill="none" height="19.5" stroke="#000" stroke-linejoin="round" stroke-width="1" width="19.5" x="52.75" y="10.25"/>
+    <rect fill="none" height="19.5" stroke="#000" stroke-linejoin="round" stroke-width="1" width="19.5" x="40.25" y="25.25"/>
+    <rect fill="none" height="19.5" stroke="#000" stroke-linejoin="round" stroke-width="1" width="19.5" x="27.75" y="40.25"/>
+    <rect fill="none" height="19.5" stroke="#000" stroke-linejoin="round" stroke-width="1" width="19.5" x="52.75" y="40.25"/>
+    <rect fill="none" height="19.5" stroke="#000" stroke-linejoin="round" stroke-width="1" width="19.5" x="40.25" y="55.25"/>
+    <rect fill="none" height="19.5" stroke="#000" stroke-linejoin="round" stroke-width="1" width="19.5" x="27.75" y="70.25"/>
+    <rect fill="none" height="19.5" stroke="#000" stroke-linejoin="round" stroke-width="1" width="19.5" x="52.75" y="70.25"/>
+</svg>
