@@ -4,15 +4,20 @@ import svgwrite
 import argparse
 
 #
+# notes
+#
+# w = hole width     (lochweite)
+# l = hole length    (lochlaenge)
+# p = hole partition (lochteilung)
+# c = hole clearance (lochabstand)
+
+#
 # defaults
 #
 
 default_filename = "pattern.svg"
 default_image_width = "100"
 default_image_height = "100"
-default_fill = None
-default_stroke = "#fff"
-default_stroke_width = 1
 default_config = '{"fill": "none", "stroke": "#000", "stroke-width": 1, "stroke-linejoin": "round"}'
 default_params = '{"staggered": 1, "uniform": 0, "corners": 0, "skip": 0}'
 
@@ -94,15 +99,9 @@ parser.add_argument("hole-partition-x", nargs = 1)
 parser.add_argument("hole-partition-y", nargs = '?')
 parser.add_argument("-x", "--image-width",  type=int, default = default_image_width)
 parser.add_argument("-y", "--image-height", type=int, default = default_image_height)
-parser.add_argument("-f", "--fill",         default = default_fill)
-parser.add_argument("-s", "--stroke",       default = default_stroke)
-parser.add_argument("-l", "--stroke-width", type=int, default = default_stroke_width)
 parser.add_argument("-o", "--output-file",  default = default_filename)
 parser.add_argument("-c", "--config",       default = default_config)
 parser.add_argument("-p", "--params",       default = default_params)
-# TODO also need args for staggered, uniform, corners, skip 
-# -- a bit too many for just one-character args, no? is there a better way?
-# PS: we don't actually need staggered, as we can tell from the hole type.
 
 args = parser.parse_args()
 
