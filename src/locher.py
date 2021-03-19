@@ -1,4 +1,5 @@
 import math
+import json
 import svgwrite
 import argparse
 
@@ -12,6 +13,8 @@ default_image_height = "100"
 default_fill = None
 default_stroke = "#fff"
 default_stroke_width = 1
+default_config = '{"fill": "none", "stroke": "#000", "stroke-width": 1, "stroke-linejoin": "round"}'
+default_params = '{"staggered": 1, "uniform": 0, "corners": 0, "skip": 0}'
 
 #
 # functions
@@ -95,6 +98,8 @@ parser.add_argument("-f", "--fill",         default = default_fill)
 parser.add_argument("-s", "--stroke",       default = default_stroke)
 parser.add_argument("-l", "--stroke-width", type=int, default = default_stroke_width)
 parser.add_argument("-o", "--output-file",  default = default_filename)
+parser.add_argument("-c", "--config",       default = default_config)
+parser.add_argument("-p", "--params",       default = default_params)
 # TODO also need args for staggered, uniform, corners, skip 
 # -- a bit too many for just one-character args, no? is there a better way?
 # PS: we don't actually need staggered, as we can tell from the hole type.
@@ -105,12 +110,10 @@ svg_width   = str(args.image_width) + "mm"
 svg_height  = str(args.image_height) + "mm"
 svg_viewbox = "0 0 " + str(args.image_width) + " " + str(args.image_height)
 
-cfg = {"fill": "none", "stroke": "#000", "stroke-width": 1, "stroke-linejoin": "round"}
+cfg = json.loads(args.config)
+opt = json.loads(args.params) 
 
 svg = svgwrite.Drawing(args.output_file, size=(svg_width, svg_height), viewBox=svg_viewbox, profile='tiny')
-draw_pattern(svg, cfg, args.image_width, args.image_height, 20, 5, 25, 15, draw_hole_q, staggered=True, uniform=False, corners=True)
+draw_pattern(svg, cfg, args.image_width, args.image_height, 20, 5, 25, 15, draw_hole_l, staggered=True, uniform=False, corners=True)
 svg.save(pretty=True, indent=4) 
-
-## python's sad "ternary" syntax:
-## [on_true] if [expression] else [on_false]
 
