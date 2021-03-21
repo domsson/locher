@@ -18,8 +18,15 @@ import argparse
 default_filename = "pattern.svg"
 default_image_width = "100"
 default_image_height = "100"
-default_config = '{"fill": "none", "stroke": "#000", "stroke-width": 1, "stroke-linejoin": "round"}'
-default_params = '{"staggered": 1, "uniform": 0, "corners": 0, "skip": 0}'
+
+default_fill = "none"
+default_stroke = "#000"
+default_stroke_width = 1
+default_stroke_linejoin = "round"
+
+default_uniform = False
+default_corners = False
+default_skip    = 0
 
 #
 # functions
@@ -92,27 +99,45 @@ print(banner)
 #
 
 parser = argparse.ArgumentParser()
-parser.add_argument("hole-type",        nargs = 1)
-parser.add_argument("hole-width",       nargs = 1)
-parser.add_argument("hole-length",      nargs = '?')
-parser.add_argument("hole-partition-x", nargs = 1)
-parser.add_argument("hole-partition-y", nargs = '?')
-parser.add_argument("-x", "--image-width",  type=int, default = default_image_width)
-parser.add_argument("-y", "--image-height", type=int, default = default_image_height)
-parser.add_argument("-o", "--output-file",  default = default_filename)
-parser.add_argument("-c", "--config",       default = default_config)
-parser.add_argument("-p", "--params",       default = default_params)
+parser.add_argument("-t", "--hole-type",        required = True)
+parser.add_argument("-w", "--hole-width",       required = True,  type = int) # hole size y
+parser.add_argument("-l", "--hole-length",      required = False, type = int) # hole size x
+parser.add_argument("-p", "--hole-partition-y", required = True,  type = int) # hole partition y
+parser.add_argument("-q", "--hole-partition-x", required = False, type = int) # hole partition x
+parser.add_argument("-u", "--uniform",          default = default_uniform)
+parser.add_argument("-c", "--corners",          default = default_corners)
+parser.add_argument("-s", "--skip",             default = default_skip, type = int)
+parser.add_argument("-x", "--image-width",  default = default_image_width,  type = int)
+parser.add_argument("-y", "--image-height", default = default_image_height, type = int)
+parser.add_argument("-f", "--filename",     default = default_filename)
+parser.add_argument("--fill",            default = default_fill,   metavar = "FILL-COLOR")
+parser.add_argument("--stroke",          default = default_stroke, metavar = "STROKE-COLOR")
+parser.add_argument("--stroke-width",    default = default_stroke_width,    type = int)
+parser.add_argument("--stroke-linejoin", default = default_stroke_linejoin)
 
 args = parser.parse_args()
+
+print(args)
 
 svg_width   = str(args.image_width) + "mm"
 svg_height  = str(args.image_height) + "mm"
 svg_viewbox = "0 0 " + str(args.image_width) + " " + str(args.image_height)
 
-cfg = json.loads(args.config)
-opt = json.loads(args.params) 
+config = {
+        "fill":            args.fill,
+        "stroke":          args.stroke,
+        "stroke-width":    args.stroke_width,
+        "stroke-linejoin": args.stroke_linejoin
+}
 
-svg = svgwrite.Drawing(args.output_file, size=(svg_width, svg_height), viewBox=svg_viewbox, profile='tiny')
-draw_pattern(svg, cfg, args.image_width, args.image_height, 20, 5, 25, 15, draw_hole_l, staggered=True, uniform=False, corners=True)
+pattern = {
+        "w": args.hole_width,
+        "l": args.hole_length if args.hole_length else args.hole_width,
+        "p": args.hole_partition_y,
+        "q": args.hole_partition_x if args.hole_partition_x else args.hole_partition_y
+} 
+
+svg = svgwrite.Drawing(args.filename, size=(svg_width, svg_height), viewBox=svg_viewbox, profile='tiny')
+draw_pattern(svg, config, args.image_width, args.image_height, pattern["l"], pattern["w"], pattern["q"], pattern["p"], draw_hole_l, staggered=True, uniform=False, corners=True)
 svg.save(pretty=True, indent=4) 
 
