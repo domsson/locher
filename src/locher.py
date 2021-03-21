@@ -169,6 +169,10 @@ svg_width   = str(args.image_width) + "mm"
 svg_height  = str(args.image_height) + "mm"
 svg_viewbox = "0 0 " + str(args.image_width) + " " + str(args.image_height)
 
+#
+# Preparations
+#
+
 config = {
         "fill":            args.fill,
         "stroke":          args.stroke,
@@ -244,7 +248,17 @@ else:
 #elif (hole_type is "lveq"):
     #
 
+#
+# Core
+#
+
 svg = svgwrite.Drawing(args.filename, size=(svg_width, svg_height), viewBox=svg_viewbox, profile='tiny')
 draw_pattern(svg, args.image_width, args.image_height, pattern["l"], pattern["w"], pattern["q"], pattern["p"], hole_func, config, **options)
 svg.save(pretty=True, indent=4) 
+
+#
+# Done
+#
+
+abort("Done! SVG written to " + args.filename", anykey=cfg_anykey_before_abort)
 

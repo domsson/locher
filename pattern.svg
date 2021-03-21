@@ -1,56 +1,53 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xlink="http://www.w3.org/1999/xlink" baseProfile="tiny" height="100mm" version="1.2" viewBox="0 0 100 100" width="100mm">
     <defs/>
-    <circle cx="22.5" cy="16.658" fill="none" r="4.75" stroke="#000" stroke-linejoin="round" stroke-width="1"/>
-    <circle cx="33.5" cy="16.658" fill="none" r="4.75" stroke="#000" stroke-linejoin="round" stroke-width="1"/>
-    <circle cx="44.5" cy="16.658" fill="none" r="4.75" stroke="#000" stroke-linejoin="round" stroke-width="1"/>
-    <circle cx="55.5" cy="16.658" fill="none" r="4.75" stroke="#000" stroke-linejoin="round" stroke-width="1"/>
-    <circle cx="66.5" cy="16.658" fill="none" r="4.75" stroke="#000" stroke-linejoin="round" stroke-width="1"/>
-    <circle cx="77.5" cy="16.658" fill="none" r="4.75" stroke="#000" stroke-linejoin="round" stroke-width="1"/>
-    <circle cx="17.0" cy="26.1843" fill="none" r="4.75" stroke="#000" stroke-linejoin="round" stroke-width="1"/>
-    <circle cx="28.0" cy="26.1843" fill="none" r="4.75" stroke="#000" stroke-linejoin="round" stroke-width="1"/>
-    <circle cx="39.0" cy="26.1843" fill="none" r="4.75" stroke="#000" stroke-linejoin="round" stroke-width="1"/>
-    <circle cx="50.0" cy="26.1843" fill="none" r="4.75" stroke="#000" stroke-linejoin="round" stroke-width="1"/>
-    <circle cx="61.0" cy="26.1843" fill="none" r="4.75" stroke="#000" stroke-linejoin="round" stroke-width="1"/>
-    <circle cx="72.0" cy="26.1843" fill="none" r="4.75" stroke="#000" stroke-linejoin="round" stroke-width="1"/>
-    <circle cx="83.0" cy="26.1843" fill="none" r="4.75" stroke="#000" stroke-linejoin="round" stroke-width="1"/>
-    <circle cx="22.5" cy="35.7106" fill="none" r="4.75" stroke="#000" stroke-linejoin="round" stroke-width="1"/>
-    <circle cx="33.5" cy="35.7106" fill="none" r="4.75" stroke="#000" stroke-linejoin="round" stroke-width="1"/>
-    <circle cx="44.5" cy="35.7106" fill="none" r="4.75" stroke="#000" stroke-linejoin="round" stroke-width="1"/>
-    <circle cx="55.5" cy="35.7106" fill="none" r="4.75" stroke="#000" stroke-linejoin="round" stroke-width="1"/>
-    <circle cx="66.5" cy="35.7106" fill="none" r="4.75" stroke="#000" stroke-linejoin="round" stroke-width="1"/>
-    <circle cx="77.5" cy="35.7106" fill="none" r="4.75" stroke="#000" stroke-linejoin="round" stroke-width="1"/>
-    <circle cx="17.0" cy="45.2369" fill="none" r="4.75" stroke="#000" stroke-linejoin="round" stroke-width="1"/>
-    <circle cx="28.0" cy="45.2369" fill="none" r="4.75" stroke="#000" stroke-linejoin="round" stroke-width="1"/>
-    <circle cx="39.0" cy="45.2369" fill="none" r="4.75" stroke="#000" stroke-linejoin="round" stroke-width="1"/>
-    <circle cx="50.0" cy="45.2369" fill="none" r="4.75" stroke="#000" stroke-linejoin="round" stroke-width="1"/>
-    <circle cx="61.0" cy="45.2369" fill="none" r="4.75" stroke="#000" stroke-linejoin="round" stroke-width="1"/>
-    <circle cx="72.0" cy="45.2369" fill="none" r="4.75" stroke="#000" stroke-linejoin="round" stroke-width="1"/>
-    <circle cx="83.0" cy="45.2369" fill="none" r="4.75" stroke="#000" stroke-linejoin="round" stroke-width="1"/>
-    <circle cx="22.5" cy="54.7631" fill="none" r="4.75" stroke="#000" stroke-linejoin="round" stroke-width="1"/>
-    <circle cx="33.5" cy="54.7631" fill="none" r="4.75" stroke="#000" stroke-linejoin="round" stroke-width="1"/>
-    <circle cx="44.5" cy="54.7631" fill="none" r="4.75" stroke="#000" stroke-linejoin="round" stroke-width="1"/>
-    <circle cx="55.5" cy="54.7631" fill="none" r="4.75" stroke="#000" stroke-linejoin="round" stroke-width="1"/>
-    <circle cx="66.5" cy="54.7631" fill="none" r="4.75" stroke="#000" stroke-linejoin="round" stroke-width="1"/>
-    <circle cx="77.5" cy="54.7631" fill="none" r="4.75" stroke="#000" stroke-linejoin="round" stroke-width="1"/>
-    <circle cx="17.0" cy="64.2894" fill="none" r="4.75" stroke="#000" stroke-linejoin="round" stroke-width="1"/>
-    <circle cx="28.0" cy="64.2894" fill="none" r="4.75" stroke="#000" stroke-linejoin="round" stroke-width="1"/>
-    <circle cx="39.0" cy="64.2894" fill="none" r="4.75" stroke="#000" stroke-linejoin="round" stroke-width="1"/>
-    <circle cx="50.0" cy="64.2894" fill="none" r="4.75" stroke="#000" stroke-linejoin="round" stroke-width="1"/>
-    <circle cx="61.0" cy="64.2894" fill="none" r="4.75" stroke="#000" stroke-linejoin="round" stroke-width="1"/>
-    <circle cx="72.0" cy="64.2894" fill="none" r="4.75" stroke="#000" stroke-linejoin="round" stroke-width="1"/>
-    <circle cx="83.0" cy="64.2894" fill="none" r="4.75" stroke="#000" stroke-linejoin="round" stroke-width="1"/>
-    <circle cx="22.5" cy="73.8157" fill="none" r="4.75" stroke="#000" stroke-linejoin="round" stroke-width="1"/>
-    <circle cx="33.5" cy="73.8157" fill="none" r="4.75" stroke="#000" stroke-linejoin="round" stroke-width="1"/>
-    <circle cx="44.5" cy="73.8157" fill="none" r="4.75" stroke="#000" stroke-linejoin="round" stroke-width="1"/>
-    <circle cx="55.5" cy="73.8157" fill="none" r="4.75" stroke="#000" stroke-linejoin="round" stroke-width="1"/>
-    <circle cx="66.5" cy="73.8157" fill="none" r="4.75" stroke="#000" stroke-linejoin="round" stroke-width="1"/>
-    <circle cx="77.5" cy="73.8157" fill="none" r="4.75" stroke="#000" stroke-linejoin="round" stroke-width="1"/>
-    <circle cx="17.0" cy="83.342" fill="none" r="4.75" stroke="#000" stroke-linejoin="round" stroke-width="1"/>
-    <circle cx="28.0" cy="83.342" fill="none" r="4.75" stroke="#000" stroke-linejoin="round" stroke-width="1"/>
-    <circle cx="39.0" cy="83.342" fill="none" r="4.75" stroke="#000" stroke-linejoin="round" stroke-width="1"/>
-    <circle cx="50.0" cy="83.342" fill="none" r="4.75" stroke="#000" stroke-linejoin="round" stroke-width="1"/>
-    <circle cx="61.0" cy="83.342" fill="none" r="4.75" stroke="#000" stroke-linejoin="round" stroke-width="1"/>
-    <circle cx="72.0" cy="83.342" fill="none" r="4.75" stroke="#000" stroke-linejoin="round" stroke-width="1"/>
-    <circle cx="83.0" cy="83.342" fill="none" r="4.75" stroke="#000" stroke-linejoin="round" stroke-width="1"/>
+    <rect fill="none" height="9.5" stroke="#000" stroke-linejoin="round" stroke-width="1" width="9.5" x="12.25" y="12.25"/>
+    <rect fill="none" height="9.5" stroke="#000" stroke-linejoin="round" stroke-width="1" width="9.5" x="23.25" y="12.25"/>
+    <rect fill="none" height="9.5" stroke="#000" stroke-linejoin="round" stroke-width="1" width="9.5" x="34.25" y="12.25"/>
+    <rect fill="none" height="9.5" stroke="#000" stroke-linejoin="round" stroke-width="1" width="9.5" x="45.25" y="12.25"/>
+    <rect fill="none" height="9.5" stroke="#000" stroke-linejoin="round" stroke-width="1" width="9.5" x="56.25" y="12.25"/>
+    <rect fill="none" height="9.5" stroke="#000" stroke-linejoin="round" stroke-width="1" width="9.5" x="67.25" y="12.25"/>
+    <rect fill="none" height="9.5" stroke="#000" stroke-linejoin="round" stroke-width="1" width="9.5" x="78.25" y="12.25"/>
+    <rect fill="none" height="9.5" stroke="#000" stroke-linejoin="round" stroke-width="1" width="9.5" x="12.25" y="23.25"/>
+    <rect fill="none" height="9.5" stroke="#000" stroke-linejoin="round" stroke-width="1" width="9.5" x="23.25" y="23.25"/>
+    <rect fill="none" height="9.5" stroke="#000" stroke-linejoin="round" stroke-width="1" width="9.5" x="34.25" y="23.25"/>
+    <rect fill="none" height="9.5" stroke="#000" stroke-linejoin="round" stroke-width="1" width="9.5" x="45.25" y="23.25"/>
+    <rect fill="none" height="9.5" stroke="#000" stroke-linejoin="round" stroke-width="1" width="9.5" x="56.25" y="23.25"/>
+    <rect fill="none" height="9.5" stroke="#000" stroke-linejoin="round" stroke-width="1" width="9.5" x="67.25" y="23.25"/>
+    <rect fill="none" height="9.5" stroke="#000" stroke-linejoin="round" stroke-width="1" width="9.5" x="78.25" y="23.25"/>
+    <rect fill="none" height="9.5" stroke="#000" stroke-linejoin="round" stroke-width="1" width="9.5" x="12.25" y="34.25"/>
+    <rect fill="none" height="9.5" stroke="#000" stroke-linejoin="round" stroke-width="1" width="9.5" x="23.25" y="34.25"/>
+    <rect fill="none" height="9.5" stroke="#000" stroke-linejoin="round" stroke-width="1" width="9.5" x="34.25" y="34.25"/>
+    <rect fill="none" height="9.5" stroke="#000" stroke-linejoin="round" stroke-width="1" width="9.5" x="45.25" y="34.25"/>
+    <rect fill="none" height="9.5" stroke="#000" stroke-linejoin="round" stroke-width="1" width="9.5" x="56.25" y="34.25"/>
+    <rect fill="none" height="9.5" stroke="#000" stroke-linejoin="round" stroke-width="1" width="9.5" x="67.25" y="34.25"/>
+    <rect fill="none" height="9.5" stroke="#000" stroke-linejoin="round" stroke-width="1" width="9.5" x="78.25" y="34.25"/>
+    <rect fill="none" height="9.5" stroke="#000" stroke-linejoin="round" stroke-width="1" width="9.5" x="12.25" y="45.25"/>
+    <rect fill="none" height="9.5" stroke="#000" stroke-linejoin="round" stroke-width="1" width="9.5" x="23.25" y="45.25"/>
+    <rect fill="none" height="9.5" stroke="#000" stroke-linejoin="round" stroke-width="1" width="9.5" x="34.25" y="45.25"/>
+    <rect fill="none" height="9.5" stroke="#000" stroke-linejoin="round" stroke-width="1" width="9.5" x="45.25" y="45.25"/>
+    <rect fill="none" height="9.5" stroke="#000" stroke-linejoin="round" stroke-width="1" width="9.5" x="56.25" y="45.25"/>
+    <rect fill="none" height="9.5" stroke="#000" stroke-linejoin="round" stroke-width="1" width="9.5" x="67.25" y="45.25"/>
+    <rect fill="none" height="9.5" stroke="#000" stroke-linejoin="round" stroke-width="1" width="9.5" x="78.25" y="45.25"/>
+    <rect fill="none" height="9.5" stroke="#000" stroke-linejoin="round" stroke-width="1" width="9.5" x="12.25" y="56.25"/>
+    <rect fill="none" height="9.5" stroke="#000" stroke-linejoin="round" stroke-width="1" width="9.5" x="23.25" y="56.25"/>
+    <rect fill="none" height="9.5" stroke="#000" stroke-linejoin="round" stroke-width="1" width="9.5" x="34.25" y="56.25"/>
+    <rect fill="none" height="9.5" stroke="#000" stroke-linejoin="round" stroke-width="1" width="9.5" x="45.25" y="56.25"/>
+    <rect fill="none" height="9.5" stroke="#000" stroke-linejoin="round" stroke-width="1" width="9.5" x="56.25" y="56.25"/>
+    <rect fill="none" height="9.5" stroke="#000" stroke-linejoin="round" stroke-width="1" width="9.5" x="67.25" y="56.25"/>
+    <rect fill="none" height="9.5" stroke="#000" stroke-linejoin="round" stroke-width="1" width="9.5" x="78.25" y="56.25"/>
+    <rect fill="none" height="9.5" stroke="#000" stroke-linejoin="round" stroke-width="1" width="9.5" x="12.25" y="67.25"/>
+    <rect fill="none" height="9.5" stroke="#000" stroke-linejoin="round" stroke-width="1" width="9.5" x="23.25" y="67.25"/>
+    <rect fill="none" height="9.5" stroke="#000" stroke-linejoin="round" stroke-width="1" width="9.5" x="34.25" y="67.25"/>
+    <rect fill="none" height="9.5" stroke="#000" stroke-linejoin="round" stroke-width="1" width="9.5" x="45.25" y="67.25"/>
+    <rect fill="none" height="9.5" stroke="#000" stroke-linejoin="round" stroke-width="1" width="9.5" x="56.25" y="67.25"/>
+    <rect fill="none" height="9.5" stroke="#000" stroke-linejoin="round" stroke-width="1" width="9.5" x="67.25" y="67.25"/>
+    <rect fill="none" height="9.5" stroke="#000" stroke-linejoin="round" stroke-width="1" width="9.5" x="78.25" y="67.25"/>
+    <rect fill="none" height="9.5" stroke="#000" stroke-linejoin="round" stroke-width="1" width="9.5" x="12.25" y="78.25"/>
+    <rect fill="none" height="9.5" stroke="#000" stroke-linejoin="round" stroke-width="1" width="9.5" x="23.25" y="78.25"/>
+    <rect fill="none" height="9.5" stroke="#000" stroke-linejoin="round" stroke-width="1" width="9.5" x="34.25" y="78.25"/>
+    <rect fill="none" height="9.5" stroke="#000" stroke-linejoin="round" stroke-width="1" width="9.5" x="45.25" y="78.25"/>
+    <rect fill="none" height="9.5" stroke="#000" stroke-linejoin="round" stroke-width="1" width="9.5" x="56.25" y="78.25"/>
+    <rect fill="none" height="9.5" stroke="#000" stroke-linejoin="round" stroke-width="1" width="9.5" x="67.25" y="78.25"/>
+    <rect fill="none" height="9.5" stroke="#000" stroke-linejoin="round" stroke-width="1" width="9.5" x="78.25" y="78.25"/>
 </svg>
