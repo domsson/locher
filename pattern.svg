@@ -1,66 +1,76 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xlink="http://www.w3.org/1999/xlink" baseProfile="tiny" height="100mm" version="1.2" viewBox="0 0 100 100" width="100mm">
-    <defs/>
-    <rect fill="none" height="4.5" rx="2.25" ry="2.25" stroke="#000" stroke-linejoin="round" stroke-width="1" width="4.5" x="17.75" y="12.75"/>
-    <rect fill="none" height="4.5" rx="2.25" ry="2.25" stroke="#000" stroke-linejoin="round" stroke-width="1" width="4.5" x="27.75" y="12.75"/>
-    <rect fill="none" height="4.5" rx="2.25" ry="2.25" stroke="#000" stroke-linejoin="round" stroke-width="1" width="4.5" x="37.75" y="12.75"/>
-    <rect fill="none" height="4.5" rx="2.25" ry="2.25" stroke="#000" stroke-linejoin="round" stroke-width="1" width="4.5" x="47.75" y="12.75"/>
-    <rect fill="none" height="4.5" rx="2.25" ry="2.25" stroke="#000" stroke-linejoin="round" stroke-width="1" width="4.5" x="57.75" y="12.75"/>
-    <rect fill="none" height="4.5" rx="2.25" ry="2.25" stroke="#000" stroke-linejoin="round" stroke-width="1" width="4.5" x="67.75" y="12.75"/>
-    <rect fill="none" height="4.5" rx="2.25" ry="2.25" stroke="#000" stroke-linejoin="round" stroke-width="1" width="4.5" x="77.75" y="12.75"/>
-    <rect fill="none" height="4.5" rx="2.25" ry="2.25" stroke="#000" stroke-linejoin="round" stroke-width="1" width="4.5" x="12.75" y="22.75"/>
-    <rect fill="none" height="4.5" rx="2.25" ry="2.25" stroke="#000" stroke-linejoin="round" stroke-width="1" width="4.5" x="22.75" y="22.75"/>
-    <rect fill="none" height="4.5" rx="2.25" ry="2.25" stroke="#000" stroke-linejoin="round" stroke-width="1" width="4.5" x="32.75" y="22.75"/>
-    <rect fill="none" height="4.5" rx="2.25" ry="2.25" stroke="#000" stroke-linejoin="round" stroke-width="1" width="4.5" x="42.75" y="22.75"/>
-    <rect fill="none" height="4.5" rx="2.25" ry="2.25" stroke="#000" stroke-linejoin="round" stroke-width="1" width="4.5" x="52.75" y="22.75"/>
-    <rect fill="none" height="4.5" rx="2.25" ry="2.25" stroke="#000" stroke-linejoin="round" stroke-width="1" width="4.5" x="62.75" y="22.75"/>
-    <rect fill="none" height="4.5" rx="2.25" ry="2.25" stroke="#000" stroke-linejoin="round" stroke-width="1" width="4.5" x="72.75" y="22.75"/>
-    <rect fill="none" height="4.5" rx="2.25" ry="2.25" stroke="#000" stroke-linejoin="round" stroke-width="1" width="4.5" x="82.75" y="22.75"/>
-    <rect fill="none" height="4.5" rx="2.25" ry="2.25" stroke="#000" stroke-linejoin="round" stroke-width="1" width="4.5" x="17.75" y="32.75"/>
-    <rect fill="none" height="4.5" rx="2.25" ry="2.25" stroke="#000" stroke-linejoin="round" stroke-width="1" width="4.5" x="27.75" y="32.75"/>
-    <rect fill="none" height="4.5" rx="2.25" ry="2.25" stroke="#000" stroke-linejoin="round" stroke-width="1" width="4.5" x="37.75" y="32.75"/>
-    <rect fill="none" height="4.5" rx="2.25" ry="2.25" stroke="#000" stroke-linejoin="round" stroke-width="1" width="4.5" x="47.75" y="32.75"/>
-    <rect fill="none" height="4.5" rx="2.25" ry="2.25" stroke="#000" stroke-linejoin="round" stroke-width="1" width="4.5" x="57.75" y="32.75"/>
-    <rect fill="none" height="4.5" rx="2.25" ry="2.25" stroke="#000" stroke-linejoin="round" stroke-width="1" width="4.5" x="67.75" y="32.75"/>
-    <rect fill="none" height="4.5" rx="2.25" ry="2.25" stroke="#000" stroke-linejoin="round" stroke-width="1" width="4.5" x="77.75" y="32.75"/>
-    <rect fill="none" height="4.5" rx="2.25" ry="2.25" stroke="#000" stroke-linejoin="round" stroke-width="1" width="4.5" x="12.75" y="42.75"/>
-    <rect fill="none" height="4.5" rx="2.25" ry="2.25" stroke="#000" stroke-linejoin="round" stroke-width="1" width="4.5" x="22.75" y="42.75"/>
-    <rect fill="none" height="4.5" rx="2.25" ry="2.25" stroke="#000" stroke-linejoin="round" stroke-width="1" width="4.5" x="32.75" y="42.75"/>
-    <rect fill="none" height="4.5" rx="2.25" ry="2.25" stroke="#000" stroke-linejoin="round" stroke-width="1" width="4.5" x="42.75" y="42.75"/>
-    <rect fill="none" height="4.5" rx="2.25" ry="2.25" stroke="#000" stroke-linejoin="round" stroke-width="1" width="4.5" x="52.75" y="42.75"/>
-    <rect fill="none" height="4.5" rx="2.25" ry="2.25" stroke="#000" stroke-linejoin="round" stroke-width="1" width="4.5" x="62.75" y="42.75"/>
-    <rect fill="none" height="4.5" rx="2.25" ry="2.25" stroke="#000" stroke-linejoin="round" stroke-width="1" width="4.5" x="72.75" y="42.75"/>
-    <rect fill="none" height="4.5" rx="2.25" ry="2.25" stroke="#000" stroke-linejoin="round" stroke-width="1" width="4.5" x="82.75" y="42.75"/>
-    <rect fill="none" height="4.5" rx="2.25" ry="2.25" stroke="#000" stroke-linejoin="round" stroke-width="1" width="4.5" x="17.75" y="52.75"/>
-    <rect fill="none" height="4.5" rx="2.25" ry="2.25" stroke="#000" stroke-linejoin="round" stroke-width="1" width="4.5" x="27.75" y="52.75"/>
-    <rect fill="none" height="4.5" rx="2.25" ry="2.25" stroke="#000" stroke-linejoin="round" stroke-width="1" width="4.5" x="37.75" y="52.75"/>
-    <rect fill="none" height="4.5" rx="2.25" ry="2.25" stroke="#000" stroke-linejoin="round" stroke-width="1" width="4.5" x="47.75" y="52.75"/>
-    <rect fill="none" height="4.5" rx="2.25" ry="2.25" stroke="#000" stroke-linejoin="round" stroke-width="1" width="4.5" x="57.75" y="52.75"/>
-    <rect fill="none" height="4.5" rx="2.25" ry="2.25" stroke="#000" stroke-linejoin="round" stroke-width="1" width="4.5" x="67.75" y="52.75"/>
-    <rect fill="none" height="4.5" rx="2.25" ry="2.25" stroke="#000" stroke-linejoin="round" stroke-width="1" width="4.5" x="77.75" y="52.75"/>
-    <rect fill="none" height="4.5" rx="2.25" ry="2.25" stroke="#000" stroke-linejoin="round" stroke-width="1" width="4.5" x="12.75" y="62.75"/>
-    <rect fill="none" height="4.5" rx="2.25" ry="2.25" stroke="#000" stroke-linejoin="round" stroke-width="1" width="4.5" x="22.75" y="62.75"/>
-    <rect fill="none" height="4.5" rx="2.25" ry="2.25" stroke="#000" stroke-linejoin="round" stroke-width="1" width="4.5" x="32.75" y="62.75"/>
-    <rect fill="none" height="4.5" rx="2.25" ry="2.25" stroke="#000" stroke-linejoin="round" stroke-width="1" width="4.5" x="42.75" y="62.75"/>
-    <rect fill="none" height="4.5" rx="2.25" ry="2.25" stroke="#000" stroke-linejoin="round" stroke-width="1" width="4.5" x="52.75" y="62.75"/>
-    <rect fill="none" height="4.5" rx="2.25" ry="2.25" stroke="#000" stroke-linejoin="round" stroke-width="1" width="4.5" x="62.75" y="62.75"/>
-    <rect fill="none" height="4.5" rx="2.25" ry="2.25" stroke="#000" stroke-linejoin="round" stroke-width="1" width="4.5" x="72.75" y="62.75"/>
-    <rect fill="none" height="4.5" rx="2.25" ry="2.25" stroke="#000" stroke-linejoin="round" stroke-width="1" width="4.5" x="82.75" y="62.75"/>
-    <rect fill="none" height="4.5" rx="2.25" ry="2.25" stroke="#000" stroke-linejoin="round" stroke-width="1" width="4.5" x="17.75" y="72.75"/>
-    <rect fill="none" height="4.5" rx="2.25" ry="2.25" stroke="#000" stroke-linejoin="round" stroke-width="1" width="4.5" x="27.75" y="72.75"/>
-    <rect fill="none" height="4.5" rx="2.25" ry="2.25" stroke="#000" stroke-linejoin="round" stroke-width="1" width="4.5" x="37.75" y="72.75"/>
-    <rect fill="none" height="4.5" rx="2.25" ry="2.25" stroke="#000" stroke-linejoin="round" stroke-width="1" width="4.5" x="47.75" y="72.75"/>
-    <rect fill="none" height="4.5" rx="2.25" ry="2.25" stroke="#000" stroke-linejoin="round" stroke-width="1" width="4.5" x="57.75" y="72.75"/>
-    <rect fill="none" height="4.5" rx="2.25" ry="2.25" stroke="#000" stroke-linejoin="round" stroke-width="1" width="4.5" x="67.75" y="72.75"/>
-    <rect fill="none" height="4.5" rx="2.25" ry="2.25" stroke="#000" stroke-linejoin="round" stroke-width="1" width="4.5" x="77.75" y="72.75"/>
-    <rect fill="none" height="4.5" rx="2.25" ry="2.25" stroke="#000" stroke-linejoin="round" stroke-width="1" width="4.5" x="12.75" y="82.75"/>
-    <rect fill="none" height="4.5" rx="2.25" ry="2.25" stroke="#000" stroke-linejoin="round" stroke-width="1" width="4.5" x="22.75" y="82.75"/>
-    <rect fill="none" height="4.5" rx="2.25" ry="2.25" stroke="#000" stroke-linejoin="round" stroke-width="1" width="4.5" x="32.75" y="82.75"/>
-    <rect fill="none" height="4.5" rx="2.25" ry="2.25" stroke="#000" stroke-linejoin="round" stroke-width="1" width="4.5" x="42.75" y="82.75"/>
-    <rect fill="none" height="4.5" rx="2.25" ry="2.25" stroke="#000" stroke-linejoin="round" stroke-width="1" width="4.5" x="52.75" y="82.75"/>
-    <rect fill="none" height="4.5" rx="2.25" ry="2.25" stroke="#000" stroke-linejoin="round" stroke-width="1" width="4.5" x="62.75" y="82.75"/>
-    <rect fill="none" height="4.5" rx="2.25" ry="2.25" stroke="#000" stroke-linejoin="round" stroke-width="1" width="4.5" x="72.75" y="82.75"/>
-    <rect fill="none" height="4.5" rx="2.25" ry="2.25" stroke="#000" stroke-linejoin="round" stroke-width="1" width="4.5" x="82.75" y="82.75"/>
-    <path d="M88,97 v2 h10 v-2" fill="none" stroke="#000" stroke-width="1"/>
-    <text fill="#000" font-family="sans-serif" font-size="3" x="75" y="99">10 mm</text>
+    <defs>
+        <rect fill="none" height="4.5" id="hole" stroke="#000" stroke-linejoin="round" stroke-width="1" width="4.5" x="-2.25" y="-2.25"/>
+    </defs>
+    <g id="pattern">
+        <use x="15.0" xlink:href="#hole" y="15.0"/>
+        <use x="25.0" xlink:href="#hole" y="15.0"/>
+        <use x="35.0" xlink:href="#hole" y="15.0"/>
+        <use x="45.0" xlink:href="#hole" y="15.0"/>
+        <use x="55.0" xlink:href="#hole" y="15.0"/>
+        <use x="65.0" xlink:href="#hole" y="15.0"/>
+        <use x="75.0" xlink:href="#hole" y="15.0"/>
+        <use x="85.0" xlink:href="#hole" y="15.0"/>
+        <use x="15.0" xlink:href="#hole" y="25.0"/>
+        <use x="25.0" xlink:href="#hole" y="25.0"/>
+        <use x="35.0" xlink:href="#hole" y="25.0"/>
+        <use x="45.0" xlink:href="#hole" y="25.0"/>
+        <use x="55.0" xlink:href="#hole" y="25.0"/>
+        <use x="65.0" xlink:href="#hole" y="25.0"/>
+        <use x="75.0" xlink:href="#hole" y="25.0"/>
+        <use x="85.0" xlink:href="#hole" y="25.0"/>
+        <use x="15.0" xlink:href="#hole" y="35.0"/>
+        <use x="25.0" xlink:href="#hole" y="35.0"/>
+        <use x="35.0" xlink:href="#hole" y="35.0"/>
+        <use x="45.0" xlink:href="#hole" y="35.0"/>
+        <use x="55.0" xlink:href="#hole" y="35.0"/>
+        <use x="65.0" xlink:href="#hole" y="35.0"/>
+        <use x="75.0" xlink:href="#hole" y="35.0"/>
+        <use x="85.0" xlink:href="#hole" y="35.0"/>
+        <use x="15.0" xlink:href="#hole" y="45.0"/>
+        <use x="25.0" xlink:href="#hole" y="45.0"/>
+        <use x="35.0" xlink:href="#hole" y="45.0"/>
+        <use x="45.0" xlink:href="#hole" y="45.0"/>
+        <use x="55.0" xlink:href="#hole" y="45.0"/>
+        <use x="65.0" xlink:href="#hole" y="45.0"/>
+        <use x="75.0" xlink:href="#hole" y="45.0"/>
+        <use x="85.0" xlink:href="#hole" y="45.0"/>
+        <use x="15.0" xlink:href="#hole" y="55.0"/>
+        <use x="25.0" xlink:href="#hole" y="55.0"/>
+        <use x="35.0" xlink:href="#hole" y="55.0"/>
+        <use x="45.0" xlink:href="#hole" y="55.0"/>
+        <use x="55.0" xlink:href="#hole" y="55.0"/>
+        <use x="65.0" xlink:href="#hole" y="55.0"/>
+        <use x="75.0" xlink:href="#hole" y="55.0"/>
+        <use x="85.0" xlink:href="#hole" y="55.0"/>
+        <use x="15.0" xlink:href="#hole" y="65.0"/>
+        <use x="25.0" xlink:href="#hole" y="65.0"/>
+        <use x="35.0" xlink:href="#hole" y="65.0"/>
+        <use x="45.0" xlink:href="#hole" y="65.0"/>
+        <use x="55.0" xlink:href="#hole" y="65.0"/>
+        <use x="65.0" xlink:href="#hole" y="65.0"/>
+        <use x="75.0" xlink:href="#hole" y="65.0"/>
+        <use x="85.0" xlink:href="#hole" y="65.0"/>
+        <use x="15.0" xlink:href="#hole" y="75.0"/>
+        <use x="25.0" xlink:href="#hole" y="75.0"/>
+        <use x="35.0" xlink:href="#hole" y="75.0"/>
+        <use x="45.0" xlink:href="#hole" y="75.0"/>
+        <use x="55.0" xlink:href="#hole" y="75.0"/>
+        <use x="65.0" xlink:href="#hole" y="75.0"/>
+        <use x="75.0" xlink:href="#hole" y="75.0"/>
+        <use x="85.0" xlink:href="#hole" y="75.0"/>
+        <use x="15.0" xlink:href="#hole" y="85.0"/>
+        <use x="25.0" xlink:href="#hole" y="85.0"/>
+        <use x="35.0" xlink:href="#hole" y="85.0"/>
+        <use x="45.0" xlink:href="#hole" y="85.0"/>
+        <use x="55.0" xlink:href="#hole" y="85.0"/>
+        <use x="65.0" xlink:href="#hole" y="85.0"/>
+        <use x="75.0" xlink:href="#hole" y="85.0"/>
+        <use x="85.0" xlink:href="#hole" y="85.0"/>
+    </g>
+    <g id="ruler">
+        <path d="M88,97 v2 h10 v-2" fill="none" stroke="#000" stroke-width="1"/>
+        <text fill="#000" font-family="sans-serif" font-size="3" x="75" y="99">10 mm</text>
+    </g>
 </svg>

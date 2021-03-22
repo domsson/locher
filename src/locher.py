@@ -58,6 +58,7 @@ cfg_anykey_before_abort = (os.name == 'nt')
 default_filename     = "pattern.svg"
 default_image_width  = "100"
 default_image_height = "100"
+default_image_zoom   = "1"
 
 default_fill            = "none"
 default_stroke          = "#000"
@@ -83,26 +84,25 @@ def abort(message, code=0, anykey=False):
 def signal_handler(sig, frame):
     abort("Received signal " + sig + ", exiting.")
 
-
 def draw_hole_r(svg, cfg, x, y, w, h):
     radius = w * 0.5
-    svg.add(svg.circle(center=(x, y), r=radius, **cfg))
+    return svg.circle(center=(x, y), r=radius, **cfg, id="hole")
 
 def draw_hole_q(svg, cfg, x, y, w, h):
     left = x - w * 0.5
     top  = y - w * 0.5
-    svg.add(svg.rect((left, top), (w, w), **cfg))
+    return svg.rect((left, top), (w, w), **cfg, id="hole")
 
 def draw_hole_l(svg, cfg, x, y, w, h):
     left = x - w * 0.5
     top  = y - h * 0.5
     radius = h * 0.5
-    svg.add(svg.rect((left, top), (w, h), radius, radius, **cfg))
+    return svg.rect((left, top), (w, h), radius, radius, **cfg, id="hole")
 
 def draw_hole_le(svg, cfg, x, y, w, h):
     left = x - w * 0.5
     top  = y - h * 0.5
-    svg.add(svg.rect((left, top), (w, h), **cfg))
+    return svg.add(svg.rect((left, top), (w, h), **cfg, id="hole"))
 
 def draw_pattern(svg, sw, sh, wx, wy, px, py, hole_func, cfg, **opt):
     uniform = opt["uniform"]
@@ -129,7 +129,13 @@ def draw_pattern(svg, sw, sh, wx, wy, px, py, hole_func, cfg, **opt):
     lw = cfg["stroke-width"] * 0.5
     hwx = wx - lw
     hwy = wy - lw
-
+    # create and add reference hole    
+    hole = hole_func(svg, cfg, 0, 0, hwx, hwy)
+    svg.defs.add(hole)
+    # create the pattern group
+    group = svg.g(id="pattern")
+    
+    # add hole instances to the pattern group
     for row in range(0, hy):
         mod = staggered * ((row % 2) ^ (not corners))
         skip = shifted * skip
@@ -137,14 +143,18 @@ def draw_pattern(svg, sw, sh, wx, wy, px, py, hole_func, cfg, **opt):
         y = sy + (row * py)
         for col in range((mod * skip), (hx - less)):
             x = sx + (col * px) + (mod * px * 0.5)
-            hole_func(svg, cfg, x, y, hwx, hwy)
+            group.add(svg.use(hole, insert=(x, y)))
+    # add the group to the drawing
+    svg.add(group)
 
 def draw_ruler(svg, sw, sh, cfg):
     path_extras = {"stroke": cfg["stroke"], "stroke-width": 1, "fill":"none"}
     text_extras = {"font-family": "sans-serif", "font-size": 3, "fill": cfg["stroke"]}
     path = "M" + str(sw-12) + "," + str(sh-3) + " v2 h10 v-2"
-    svg.add(svg.path(path, **path_extras))
-    svg.add(svg.text('10 mm', insert=(sw-25, sh-1), **text_extras))
+    group = svg.g(id="ruler")
+    group.add(svg.path(path, **path_extras))
+    group.add(svg.text('10 mm', insert=(sw-25, sh-1), **text_extras))
+    svg.add(group)
 
 #
 # import external dependencies we can't expect to be installed
@@ -192,6 +202,7 @@ parser.add_argument("-c", "--corners",        default = default_corners)
 parser.add_argument("-s", "--skip",           default = default_skip, type = int)
 parser.add_argument("-x", "--image-width",  default = default_image_width,  type = int)
 parser.add_argument("-y", "--image-height", default = default_image_height, type = int)
+parser.add_argument("-z", "--image-zoom",   default = default_image_zoom,   type = float)
 parser.add_argument("-f", "--filename",     default = default_filename)
 parser.add_argument("--fill",            default = default_fill,   metavar = "FILL-COLOR")
 parser.add_argument("--stroke",          default = default_stroke, metavar = "STROKE-COLOR")
@@ -203,7 +214,9 @@ args = parser.parse_args()
 
 svg_width   = str(args.image_width) + "mm"
 svg_height  = str(args.image_height) + "mm"
-svg_viewbox = "0 0 " + str(args.image_width) + " " + str(args.image_height)
+box_width   = int(args.image_width * (1 / args.image_zoom))
+box_height  = int(args.image_height * (1 / args.image_zoom))
+svg_viewbox = "0 0 " + str(box_width) + " " + str(box_height)
 
 #
 # Preparations
