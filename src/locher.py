@@ -55,17 +55,19 @@ cfg_anykey_before_abort = (os.name == 'nt')
 # defaults
 #
 
-default_filename     = "pattern.svg"
+default_output_file  = "pattern.svg"
 default_image_width  = "100"
 default_image_height = "100"
 default_image_zoom   = "1"
 
 default_fill            = "none"
 default_stroke          = "#000"
-default_stroke_width    = 1
+default_stroke_width    = "1"
 default_stroke_linejoin = "round"
 default_font_family     = "sans-serif"
 default_font_size       = "3"
+
+default_scale_stroke    = False
 
 default_uniform = False
 default_corners = False
@@ -104,7 +106,7 @@ def draw_hole_le(svg, cfg, x, y, w, h):
     top  = y - h * 0.5
     return svg.add(svg.rect((left, top), (w, h), **cfg, id="hole"))
 
-def draw_pattern(svg, sw, sh, wx, wy, px, py, hole_func, cfg, **opt):
+def draw_pattern(svg, sw, sh, wx, wy, px, py, f, e, hole_func, cfg, **opt):
     uniform = opt["uniform"]
     staggered = opt["staggered"]
     corners = opt["corners"]
@@ -114,8 +116,8 @@ def draw_pattern(svg, sw, sh, wx, wy, px, py, hole_func, cfg, **opt):
     cx = px - wx
     cy = py - wy
     # plate edges
-    ex = -(2 * wx) if px <= 0 else (2 * px)
-    ey = -(2 * wy) if py <= 0 else (2 * py)
+    ex = -(2 * wx) if f <= 0 else (2 * f)
+    ey = -(2 * wy) if e <= 0 else (2 * e)
     # number of holes
     hx = math.floor((sw - ex + cx) / px)
     hy = math.floor((sh - ey + cy) / py)
@@ -126,9 +128,11 @@ def draw_pattern(svg, sw, sh, wx, wy, px, py, hole_func, cfg, **opt):
     sx = 0.5 * (sw - fw) + 0.5 * px
     sy = 0.5 * (sh - fh) + 0.5 * py
     # hole drawing props
-    lw = cfg["stroke-width"] * 0.5
-    hwx = wx - lw
-    hwy = wy - lw
+    #lw = cfg["stroke-width"] * 0.5
+    #hwx = wx - lw
+    #hwy = wy - lw
+    hwx = wx
+    hwy = wy
     # create and add reference hole    
     hole = hole_func(svg, cfg, 0, 0, hwx, hwy)
     svg.defs.add(hole)
@@ -147,13 +151,16 @@ def draw_pattern(svg, sw, sh, wx, wy, px, py, hole_func, cfg, **opt):
     # add the group to the drawing
     svg.add(group)
 
-def draw_ruler(svg, sw, sh, cfg):
-    path_extras = {"stroke": cfg["stroke"], "stroke-width": 1, "fill":"none"}
-    text_extras = {"font-family": "sans-serif", "font-size": 3, "fill": cfg["stroke"]}
-    path = "M" + str(sw-12) + "," + str(sh-3) + " v2 h10 v-2"
+def draw_ruler(svg, sw, sh, zoom, cfg):
+    z = 1.0 / zoom
+    path_extras = {"stroke": cfg["stroke"], "stroke-width": (0.5 * z), "fill":"none"}
+    text_extras = {"font-family": "sans-serif", "font-size": 3 * z, "font-weight": "bold", "fill": cfg["stroke"]}
+    rect_extras = {"fill": "#fff", "fill-opacity": 0.8}
+    path = "M" + str(sw-(12*z)) + "," + str(sh-(3*z)) + " v" + str(2*z) + " h" + str(10) + " v" + str(-2*z)
     group = svg.g(id="ruler")
+    group.add(svg.rect((0, sh-(4*z)), (sw, 5*z), **rect_extras))
     group.add(svg.path(path, **path_extras))
-    group.add(svg.text('10 mm', insert=(sw-25, sh-1), **text_extras))
+    group.add(svg.text('10 mm', insert=(sw-(25*z), sh-(0.5*z)), **text_extras))
     svg.add(group)
 
 #
@@ -193,29 +200,34 @@ print(" Version " + Version.get_version() + " (using svgwrite " + svgwrite.__ver
 #
 
 parser = argparse.ArgumentParser()
-parser.add_argument("-t", "--hole-type",      required = True)
-parser.add_argument("-w", "--hole-width",     required = True,  type = int) # hole size y
-parser.add_argument("-l", "--hole-length",    required = False, type = int) # hole size x
-parser.add_argument("-p", "--hole-partition", required = True,  type = int) # hole partition
+parser.add_argument("-t", "--hole-type",          required = True)
+parser.add_argument("-w", "--hole-width",         required = True,  type = float) # hole size y
+parser.add_argument("-l", "--hole-length",        required = False, type = float) # hole size x
+parser.add_argument("-p", "--hole-partition-y",   required = True,  type = float) # hole partition y
+parser.add_argument("-q", "--hole-partition-x",   required = False, type = float) # hole partition x
+parser.add_argument("-e", "--hole-free-border-y", required = False, type = float, default = 0)
+parser.add_argument("-f", "--hole-free-border-x", required = False, type = float, default = 0)
 parser.add_argument("-u", "--uniform",        default = default_uniform)
 parser.add_argument("-c", "--corners",        default = default_corners)
 parser.add_argument("-s", "--skip",           default = default_skip, type = int)
 parser.add_argument("-x", "--image-width",  default = default_image_width,  type = int)
 parser.add_argument("-y", "--image-height", default = default_image_height, type = int)
 parser.add_argument("-z", "--image-zoom",   default = default_image_zoom,   type = float)
-parser.add_argument("-f", "--filename",     default = default_filename)
+parser.add_argument("-o", "--output-file",  default = default_output_file)
 parser.add_argument("--fill",            default = default_fill,   metavar = "FILL-COLOR")
 parser.add_argument("--stroke",          default = default_stroke, metavar = "STROKE-COLOR")
-parser.add_argument("--stroke-width",    default = default_stroke_width,    type = int)
+parser.add_argument("--stroke-width",    default = default_stroke_width,    type = float)
 parser.add_argument("--stroke-linejoin", default = default_stroke_linejoin)
 parser.add_argument("--font-size",       default = default_font_size)
+parser.add_argument("--scale-stroke",    default = default_scale_stroke, type = bool)
 
 args = parser.parse_args()
 
+zoom_factor = 1.0 / args.image_zoom
 svg_width   = str(args.image_width) + "mm"
 svg_height  = str(args.image_height) + "mm"
-box_width   = int(args.image_width * (1 / args.image_zoom))
-box_height  = int(args.image_height * (1 / args.image_zoom))
+box_width   = int(args.image_width * zoom_factor)
+box_height  = int(args.image_height * zoom_factor)
 svg_viewbox = "0 0 " + str(box_width) + " " + str(box_height)
 
 #
@@ -225,15 +237,16 @@ svg_viewbox = "0 0 " + str(box_width) + " " + str(box_height)
 config = {
         "fill":            args.fill,
         "stroke":          args.stroke,
-        "stroke-width":    args.stroke_width,
+        "stroke-width":    args.stroke_width * zoom_factor,
         "stroke-linejoin": args.stroke_linejoin
 }
-
 pattern = {
         "w": args.hole_width,
         "l": args.hole_length if args.hole_length else args.hole_width,
-        "p": args.hole_partition,
-        "q": args.hole_partition
+        "p": args.hole_partition_y,
+        "q": args.hole_partition_x if args.hole_partition_x else args.hole_partition_y,
+        "e": args.hole_free_border_y,
+        "f": args.hole_free_border_x
 }
 
 options = {
@@ -291,14 +304,34 @@ else:
 # Core
 #
 
-svg = svgwrite.Drawing(args.filename, size=(svg_width, svg_height), viewBox=svg_viewbox, profile='tiny')
-draw_pattern(svg, args.image_width, args.image_height, pattern["l"], pattern["w"], pattern["q"], pattern["p"], hole_func, config, **options)
-draw_ruler(svg, args.image_width, args.image_height, config)
+svg = svgwrite.Drawing(args.output_file, size=(svg_width, svg_height), viewBox=svg_viewbox)
+#svg = svgwrite.Drawing(args.output_file, size=(svg_width, svg_height), viewBox=svg_viewbox, profile='tiny')
+draw_pattern(
+    svg,
+    box_width,
+    box_height,
+    pattern["l"],
+    pattern["w"],
+    pattern["q"],
+    pattern["p"],
+    pattern["f"],
+    pattern["e"],
+    hole_func,
+    config,
+    **options
+)
+draw_ruler(
+    svg,
+    box_width,
+    box_height,
+    args.image_zoom,
+    config
+)
 svg.save(pretty=True, indent=4) 
 
 #
 # Done
 #
 
-abort("Done! SVG written to " + args.filename, anykey=cfg_anykey_before_abort)
+abort("Done! SVG written to " + args.output_file, anykey=cfg_anykey_before_abort)
 
